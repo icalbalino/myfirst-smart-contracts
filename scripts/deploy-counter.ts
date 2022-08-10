@@ -4,7 +4,16 @@ import { ethers } from "hardhat";
 async function deploy() {
     const C = await ethers.getContractFactory("Counter");
     const counter = await C.deploy();
-    console.log(await counter.count());
+    await counter.deployed();
+    // console.log("Counter", await counter.count());
+
+    return counter;
 }
 
-deploy();
+async function count(counter) {
+    await counter.count();
+    console.log("Counter", await counter.getCounter());
+}
+
+deploy().then(count);
+// deploy();
