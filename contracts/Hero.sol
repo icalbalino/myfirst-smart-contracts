@@ -10,6 +10,11 @@ contract Heros {
     // a mapping that takes an addresses and produces out arrays.
     mapping(address => uint[]) addressToHeroes;
 
+    // return a random number (random number generator)
+    function generateRandom() public view returns (uint) {
+        return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp)));
+    }
+
     // a way to access that address by doing a view non-state changing function.
     // which means we could actually call those and get data out from the outside and 
     // we can even call it for free, we only need a provider and don't need a signer 
@@ -17,10 +22,53 @@ contract Heros {
         return addressToHeroes[msg.sender];
     }
 
+    function getStrength(uint hero) public pure returns(uint){
+        return(hero >> 2) & 0x1F;
+    }
+
+    function getHealth(uint hero) public pure returns(uint){
+        return(hero >> 7) & 0x1F;
+    }
+
+    function getDex(uint hero) public pure returns(uint){
+        return(hero >> 12) & 0x1F;
+    }
+
+    function getIntellect(uint hero) public pure returns(uint){
+        return(hero >> 17) & 0x1F;
+    }
+
+    function getMagic(uint hero) public pure returns(uint){
+        return(hero >> 22) & 0x1F;
+    }
+
     // the user gets to select the class that comes in, and we want to be paid money.
     // function that requires a signer and requires eath(eth/ether) for to execute 
     function createHero(Class class) public payable{
         require(msg.value >= 0.05 ether, "Please send more money");
+
+        // stats are strength, health, dexterity, intellect, magic
+        uint[] stats = new uint[](5);
+        stats[0] = 2;
+        stats[1] = 7;
+        stats[2] = 12;
+        stats[3] = 17;
+        stats[4] = 22;
+
+        uint len = 5;
+        uint hero = uint(class);
+
+        do{
+            uint pos = generateRandom() % len;
+            uint value = generateRandom() % (13 + len) + 1;
+
+            hero |= value << stats[pos];
+
+            len--;
+            stats[pos] = stats[len];
+        } while(len > 0);
+
+        addressToHeroes[msg.sender].push(hero);
     }
 }
 
