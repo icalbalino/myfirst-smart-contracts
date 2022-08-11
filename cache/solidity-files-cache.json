@@ -109,8 +109,8 @@
       ]
     },
     "C:\\ifbalino\\contracts\\TestGas.sol": {
-      "lastModificationDate": 1660166114583,
-      "contentHash": "4f08b63c59271f4be0f6fe9b1cd3333a",
+      "lastModificationDate": 1660167591684,
+      "contentHash": "586d0878bc5920d51589de9ecb0cf633",
       "sourceName": "contracts/TestGas.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -143,6 +143,43 @@
       ],
       "artifacts": [
         "TestGas"
+      ]
+    },
+    "C:\\ifbalino\\contracts\\Hero.sol": {
+      "lastModificationDate": 1660238040743,
+      "contentHash": "92ebbffedd81a505917ec9bc75aa4767",
+      "sourceName": "contracts/Hero.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Heros"
       ]
     }
   }
