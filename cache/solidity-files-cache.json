@@ -218,6 +218,44 @@
       "artifacts": [
         "TestHero"
       ]
+    },
+    "C:\\ifbalino\\contracts\\Fallback.sol": {
+      "lastModificationDate": 1660519000433,
+      "contentHash": "f407072849dc679dcdccf9279aa72693",
+      "sourceName": "contracts/Fallback.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Fallback",
+        "IFallback"
+      ]
     }
   }
 }
