@@ -258,8 +258,8 @@
       ]
     },
     "C:\\ifbalino\\contracts\\A.sol": {
-      "lastModificationDate": 1660589620817,
-      "contentHash": "707edd8d61c9c67a7865545a9dffc5f8",
+      "lastModificationDate": 1660592346888,
+      "contentHash": "54173e9046b49f3d13f928ea85d3c02d",
       "sourceName": "contracts/A.sol",
       "solcConfig": {
         "version": "0.8.9",

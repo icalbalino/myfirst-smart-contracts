@@ -47,8 +47,8 @@ contract B {
 
     function setB(uint _b) public {
         s.b = _b;
-        (bool success, bytes memory bbb) = s.ContractA.delegatecall(
-            abi.encodeWithSignature("setA(uint256)", _b + 1)
+        (bool success, bytes memory z) = s.ContractA.delegatecall(
+            abi.encodeWithSignature("setA() public view returns(uint256)", _b + 1)
         );
 
         console.log("success", success);
