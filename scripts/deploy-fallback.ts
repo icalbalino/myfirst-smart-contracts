@@ -27,6 +27,10 @@ async function fallback() {
     const b = await deploy("B", a.address);
 
     await printStroge(b, "B", 3);
+    await b.setB(0x45);
+    console.log("------------------");
+    await printStroge(b, "B", 3);
+
     // console.log("A", await a.getA());
     // console.log("B", await b.getB());
     // console.log("------------");

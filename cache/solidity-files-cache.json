@@ -258,9 +258,48 @@
       ]
     },
     "C:\\ifbalino\\contracts\\A.sol": {
-      "lastModificationDate": 1660587242226,
-      "contentHash": "2c04f4709b0b33556765a4efcf9c3ed0",
+      "lastModificationDate": 1660589620817,
+      "contentHash": "707edd8d61c9c67a7865545a9dffc5f8",
       "sourceName": "contracts/A.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol",
+        "./Storage.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "A",
+        "B"
+      ]
+    },
+    "C:\\ifbalino\\contracts\\Storage.sol": {
+      "lastModificationDate": 1660591362320,
+      "contentHash": "dd81bfb1898b6ae1d3c4794453214da8",
+      "sourceName": "contracts/Storage.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -290,10 +329,7 @@
       "versionPragmas": [
         "^0.8.9"
       ],
-      "artifacts": [
-        "A",
-        "B"
-      ]
+      "artifacts": []
     }
   }
 }
