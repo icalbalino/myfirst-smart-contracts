@@ -256,6 +256,44 @@
         "Fallback",
         "IFallback"
       ]
+    },
+    "C:\\ifbalino\\contracts\\A.sol": {
+      "lastModificationDate": 1660577929189,
+      "contentHash": "7a73b3186722f29c16889c08fb551505",
+      "sourceName": "contracts/A.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "A",
+        "B"
+      ]
     }
   }
 }
