@@ -15,20 +15,42 @@ contract A {
     } 
 }
 
-contract B {
-    uint a;
-    address ContractA;
+// contract B {
+//     uint a;
+//     address ContractA;
     
+//     constructor(address _A) {
+//         ContractA = _A;
+//     }
+
+//     function setB(uint _a) public {
+//         a = _a;
+//         A(ContractA).setA(_a + 1);
+//     }
+
+//     function getB() public view returns(uint) {
+//         return a;
+//     } 
+// }
+
+contract B {
+    uint b;
+    address ContractA;
+
     constructor(address _A) {
         ContractA = _A;
     }
 
-    function setB(uint _a) public {
-        a = _a;
-        A(ContractA).setA(_a + 1);
+    function setB(uint _b) public {
+        b = _b;
+        (bool success, bytes memory bbb) = ContractA.delegatecall(
+            abi.encodeWithSignature("setA(uint256)", _b + 1)
+        );
+
+        console.log("success", success);
     }
 
     function getB() public view returns(uint) {
-        return a;
+        return b;
     } 
 }
