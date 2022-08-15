@@ -9,3 +9,8 @@
 >
 > -Theprimeagen
 >
+
+
+## Resources
+- [A Tour of Web3's Ethereum](https://theprimeagen.github.io/web3-smart-contracts/)
+- [GitHub Repo](https://github.com/ThePrimeagen/web3-smart-contracts)
